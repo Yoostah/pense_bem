@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    height: 100vh;
+    background: rgb(146, 145, 145);
+    
+}
+
+#game {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+}
+
+#led { 
+    padding: 2rem;
+    width: 50%;
+    margin: 1rem auto;
+    height: 200px;
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+#led:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 33.3%, rgba(255, 255, 255, 0.4) 33.3%, rgba(255, 255, 255, 0.4) 66.7%, rgba(255, 255, 255, 0.6) 66.7%), linear-gradient(to right, rgba(255, 0, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.6) 66.7%, rgba(0, 0, 255, 0.6) 66.7%);
+    background-size: 3px 3px;
+    mix-blend-mode: multiply;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    isolation: isolate
+}
+
+.led-content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+.led-content strong {    
+    color: white;
+    text-align: left;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 3vw;
+  
+}
+
+.points {
+    font-size: 3rem;
+    color: orangered;
+    text-shadow: 1px 2px 2px black;
+}
+
+.questions-info, .pergunta, .tentativas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.pergunta span, .tentativas span {
+    font-size: 2rem;
+    color: orangered;
+    text-shadow: 1px 2px 2px black;
+}
+
+
+#controllers {
+    flex: 1; 
+    padding: 2rem;
+    display: block;
+    gap: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btn-group .btn {  
+    flex: 0 1 140px;
+    padding: 1rem;
+    border-radius: .5rem;
+    border-color: rgba(255, 255, 255, .8);
+    border: 3px solid rgba(255, 255, 255, .8);
+    transform: rotate(10deg);
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:before {
+    content:"";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.btnA:before {
+    background-color: rgb(255, 0, 0);
+}
+
+.btnB:before {
+    background-color: rgb(255, 255, 0);
+}
+
+.btnC:before {
+    background-color: rgb(0, 0, 255);
+}
+
+.btnD:before {
+    background-color: rgb(0, 128, 0);
+}
+
+.btn:hover:before  {
+    filter: sepia(20%);
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.answer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.answer-a {
+    background-color: red;
+}
+
+.answer-b {
+    background-color: yellow;
+}
+
+.answer-c {
+    background-color: blue;
+}
+
+.answer-d {
+    background-color: green;
+}
+
+.questions-info:has(h2.gameover) {
+    background: red;
+    justify-content: center;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pense bem</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./scripts.js"></script>
+  </head>
+  <body>
+    <main id="game">
+      <section id="led">
+        <div class="led-content">
+          <strong>Pontuação: <span class="points">0</span></strong>
+          <div class="questions-info">
+            <h2 class="pergunta">Pergunta: <span>1/10</span></h2>
+            <h2 class="tentativas">Tentativas: <span>3</span></h2>
+          </div>
+        </div>
+      </section>
+      <section id="controllers">
+        <div class="btn-group">
+          <button type="button" class="btn btnA" data-answer="a">A</button>
+          <button type="button" class="btn btnB" data-answer="b">B</button>
+          <button type="button" class="btn btnC" data-answer="c">C</button>
+          <button type="button" class="btn btnD" data-answer="d">D</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Respostas corretas: <span></span></footer>
+  </body>
+</html>
