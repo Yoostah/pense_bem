@@ -22,8 +22,10 @@ body {
     width: 50%;
     margin: 1rem auto;
     height: 200px;
-    border: 3px solid rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(0, 0, 0, 0.596);
     position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 #led:before {
@@ -34,7 +36,7 @@ body {
     background-size: 3px 3px;
     mix-blend-mode: multiply;
     border-radius: 5px;
-    background-color: rgb(0, 0, 0);
+    background-color: #00f;
     z-index: 1;
     isolation: isolate
 }
