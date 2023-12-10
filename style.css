@@ -43,6 +43,7 @@ body {
     position: absolute;
     z-index: 2;
     color: white;
+    width: calc(100% - 4rem);
 }
 
 .led-content strong {    

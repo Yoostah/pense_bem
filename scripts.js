@@ -33,7 +33,7 @@ class Game {
   }
 
   startGame() {
-    this.scoreDisplay.innerHTML = this.score;
+    this.scoreDisplay.innerHTML = this.score.toString().padStart(4, "0");
     this.gameProgress.innerHTML = `${this.currentQuestion + 1} de ${
       this.questions.length
     }`;
@@ -53,7 +53,7 @@ class Game {
     if (this.gameOver) return;
     if (answer === this.questions[this.currentQuestion]) {
       this.score += this.points;
-      this.scoreDisplay.innerHTML = this.score;
+      this.scoreDisplay.innerHTML = this.score.toString().padStart(4, "0");
       this.nextQuestion();
     } else {
       this.tentatives--;
